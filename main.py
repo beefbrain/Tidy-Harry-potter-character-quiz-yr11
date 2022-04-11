@@ -92,5 +92,10 @@ while i < len(sort_char_score) - 2:
 for j in range(i):
   first_key = list(sort_char_score)[j] 
 #i am only printing the keys
-  print ("your Hogwarts friend group has :")
-  print (first_key [0])
+  print (first_key [0],  end = '')
+  print (",",  end = ' ')
+
+if i == 0:
+  print("is your hogwarts best friend, you guys have so much in common!")
+else:
+  print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!")
