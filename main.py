@@ -56,10 +56,18 @@ elif ans == 2:
 
 # the keys in the the dictionary char_score is the same to the value of all of the sets. i need to use a for loop to link them as the for loop will check the dictionary keys one after the other.
 
-for character in ans_set:
-#character holds the values in ans_set
-  #print(character)
-#i am printing to test if characters holds the correct values
-  char_score[character] +=1
-print (char_score)
+char_score = update_dict(char_score, ans_set)
+
+#print (char_score)
 #printing to test if the vaules are added up correctly 
+
+#I need to order the dictionary from largest to smallest and i found a format for that.
+
+#I need to order the dictionary from largest to smallest and i found a format for that.
+
+sort_char_score = sorted(char_score.items(), key=lambda x: x[1], reverse=True)
+
+#print (sort_char_score)
+#i am only printing the key
+print(list(sort_char_score)[0])
+print(" is your best friend at hogwarts! you guys have so much in common!")
