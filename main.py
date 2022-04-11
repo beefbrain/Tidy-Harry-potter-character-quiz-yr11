@@ -25,18 +25,16 @@ while True:
   
 while ans > 2:
   print("That is not an option, try again")
-  ans = int(input("Enter your option here..."))
+  while True:
+    try:
+      ans = int(input("Enter your option here..."))
+      break
+    except ValueError:
+        print("Please input integer only...")  
+        continue
   if ans <=2:
    break
   
 bad_boy_girl = {"Harry Potter", "Draco Malfoy", "Ginny Weasley"} 
 gd_influ = {"Hermioni Granger", "Neville Longbottom", "Ginny Weasley"} 
 quiet = {"Neville Longbottom", "Luna Lovegood", "Cedric Diggory"} 
-ans_set = {}
-
-if ans == 0:
-    ans_set = bad_boy_girl
-elif ans == 1:
-    ans_set = gd_influ
-elif ans == 2:
-  ans_set = quiet
