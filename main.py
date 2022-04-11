@@ -44,8 +44,17 @@ quiet = {"Neville Longbottom", "Luna Lovegood", "Cedric Diggory"}
 ans_set = {}
 
 if ans == 0:
-    ans_set = bad_boy_girl
+  for character in bad_boy_girl:
+    char_score[character] +=1
 elif ans == 1:
-    ans_set = gd_influ
+  for character in gd_influ:
+    char_score[character] +=1
 elif ans == 2:
-  ans_set = quiet
+  for character in quiet:
+    char_score[character] +=1
+
+# the keys in the the dictionary char_score is the same to the value of all of the sets. i need to use a for loop to link them as the for loop will check the dictionary keys one after the other.
+
+
+print (char_score)
+#printing to test if the vaules are added up correctly 
