@@ -67,7 +67,30 @@ char_score = update_dict(char_score, ans_set)
 
 sort_char_score = sorted(char_score.items(), key=lambda x: x[1], reverse=True)
 
-#print (sort_char_score)
-#i am only printing the key
-print(list(sort_char_score)[0])
-print(" is your best friend at hogwarts! you guys have so much in common!")
+i = 0
+#the value of i will increase by one every loop thus will check the first key would become the next key and the next key would become the key after next key
+# i will be the amount of ties, the value of i chanches 
+while i < len(sort_char_score) - 2:
+  first_key = list(sort_char_score)[i] 
+  next_key = list(sort_char_score)[i+1]
+  #print (first_key)
+  #print (next_key)
+  #^this goes on until there are no ties, if there are no ties, the loop     will be broken
+  if first_key[1] == next_key[1]:
+    i +=1
+    
+  else:
+    break
+  
+    
+#I print the results here
+#print (i)
+#I need to print the key of the sorted dictionary up to 'i' place holder 
+# i will be using a for loop for this
+
+
+for j in range(i):
+  first_key = list(sort_char_score)[j] 
+#i am only printing the keys
+  print ("your Hogwarts friend group has :")
+  print (first_key [0])
