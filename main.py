@@ -16,21 +16,31 @@ print ("Enter 2")
 ans = 0
 while True:
   try:
+    print(" ")
     ans = int(input("Enter your option here..."))
+    print(" ")
     break
   except ValueError:
-      print("Please input integer only...")  
+      
+      print("Please input integer only...") 
+      print("****************************")
+    
       continue
 
   
 while ans > 2:
   print("That is not an option, try again")
+  print("********************************")
+  print(" ")
   while True:
     try:
       ans = int(input("Enter your option here..."))
+      print(" ")
       break
     except ValueError:
-        print("Please input integer only...")  
+        print("Please input integer only...") 
+        print("****************************")
+        print(" ")
         continue
   if ans <=2:
    break
@@ -38,3 +48,21 @@ while ans > 2:
 bad_boy_girl = {"Harry Potter", "Draco Malfoy", "Ginny Weasley"} 
 gd_influ = {"Hermioni Granger", "Neville Longbottom", "Ginny Weasley"} 
 quiet = {"Neville Longbottom", "Luna Lovegood", "Cedric Diggory"} 
+ans_set = {}
+
+if ans == 0:
+    ans_set = bad_boy_girl
+elif ans == 1:
+    ans_set = gd_influ
+elif ans == 2:
+  ans_set = quiet
+
+# the keys in the the dictionary char_score is the same to the value of all of the sets. i need to use a for loop to link them as the for loop will check the dictionary keys one after the other.
+
+for character in ans_set:
+#character holds the values in ans_set
+  #print(character)
+#i am printing to test if characters holds the correct values
+  char_score[character] +=1
+print (char_score)
+#printing to test if the vaules are added up correctly 
