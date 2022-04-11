@@ -1,5 +1,18 @@
-#sets and dictionaries 
-
+#def function for non int error handling 
+def int_only():  
+  while True:
+    try:
+      print(" ")
+      ans1 = 0
+      ans1 = int(input("Enter your option here..."))
+      print(" ")
+      return ans1
+      break
+    except ValueError:  
+        print ("")
+        print("Please input integer only...") 
+        print("****************************")     
+        continue
 #dictionary of all the characters all characters have the same value of 0 so i found a finction that is a short cut for this
 char_score = {}.fromkeys(["Hermioni Granger", "Harry Potter", "Ron Weasley", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood", "Cedric Diggory", "Fred and George Weasley", "Ginny Weasley" ], 0)
 
@@ -13,35 +26,15 @@ print ("Someone a bit quiet and down to earth, they are very relaxing to hang ou
 print ("Enter 2")
 #what id id to make this work was made my while and if statememnt more specific and added the input in the loop which i didn't do before.
 
-ans = 0
-while True:
-  try:
-    print(" ")
-    ans = int(input("Enter your option here..."))
-    print(" ")
-    break
-  except ValueError:
-      
-      print("Please input integer only...") 
-      print("****************************")
-    
-      continue
+
+ans = int_only()
 
   
 while ans > 2:
   print("That is not an option, try again")
   print("********************************")
   print(" ")
-  while True:
-    try:
-      ans = int(input("Enter your option here..."))
-      print(" ")
-      break
-    except ValueError:
-        print("Please input integer only...") 
-        print("****************************")
-        print(" ")
-        continue
+  ans = int_only()
   if ans <=2:
    break
   
@@ -56,13 +49,3 @@ elif ans == 1:
     ans_set = gd_influ
 elif ans == 2:
   ans_set = quiet
-
-# the keys in the the dictionary char_score is the same to the value of all of the sets. i need to use a for loop to link them as the for loop will check the dictionary keys one after the other.
-
-for character in ans_set:
-#character holds the values in ans_set
-  #print(character)
-#i am printing to test if characters holds the correct values
-  char_score[character] +=1
-print (char_score)
-#printing to test if the vaules are added up correctly 
