@@ -13,6 +13,10 @@ def int_only():
         print("Please input integer only...") 
         print("****************************")     
         continue
+def update_dict(up_dict, cho_set):
+  for character in cho_set:
+    up_dict[character] +=1
+  return up_dict
 #dictionary of all the characters all characters have the same value of 0 so i found a finction that is a short cut for this
 char_score = {}.fromkeys(["Hermioni Granger", "Harry Potter", "Ron Weasley", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood", "Cedric Diggory", "Fred and George Weasley", "Ginny Weasley" ], 0)
 
