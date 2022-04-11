@@ -13,6 +13,7 @@ def int_only():
         print("Please input integer only...") 
         print("****************************")     
         continue
+#mathcing dict with chosen lost def function
 def update_dict(up_dict, cho_set):
   for character in cho_set:
     up_dict[character] +=1
@@ -58,6 +59,81 @@ elif ans == 2:
 
 char_score = update_dict(char_score, ans_set)
 
+
+print("I would like my friends to be...")
+print("----------------------------------------------------------")
+print("Funny, I love to have a good laugh with my friends")
+print("Enter 0")
+print("Popular, it will improve my social status at hogwarts")
+print("Enter 1")
+print("Bravery, thats how I know they will never be afraid to stad up for me or what is right")
+print("Enter 2")
+print("")
+
+ans = int_only()
+
+while ans > 2:
+  print("That is not an option, try again")
+  print("********************************")
+  print(" ")
+  ans = int_only()
+  if ans <=2:
+   break
+
+funny ={"Ron Weasley", "Draco Malfoy", "Fred and George Weasley", "Ginny Weasley"}
+popular = {"Harry Potter", "Draco Malfoy", "Cedric Diggory"}
+brave= {"Harry Potter", "Cedric Diggory"}
+ans_set = {}
+
+if ans == 0:
+    ans_set = funny
+elif ans == 1:
+    ans_set = popular
+elif ans == 2:
+  ans_set = brave
+
+char_score = update_dict(char_score, ans_set)
+
+print("Which one of these traits would you like in a friend")
+print("----------------------------------------------------------")
+print("I would like my friend to be positive and brighten things up even when im sad")
+print("Enter 0")
+print("Curagous, I love to do things a little out my comfort zone and it would be nice to have friends to acompany me")
+print("Enter 1")
+print("Inteligence, they can help me get out of tough situations with their wit! and it would be fun to join academic clubs together.")
+print("Enter 2")
+print("")
+
+ans = int_only()
+while ans > 2:
+  print("That is not an option, try again")
+  print("********************************")
+  print(" ")
+  ans = int_only()
+  if ans <=2:
+   break
+    
+positivity = {"Luna Lovegood", "Fred and George Weasley"}
+courageous = {"Ron Weasley", "Neville Longbottom"}
+intelligence = { "Hermioni Granger", "Draco Malfoy Cedric Diggory", "Ginny Weasley"}
+ans_set = {}
+
+
+    
+if ans == 0:
+    ans_set = positivity
+elif ans == 1:
+    ans_set = courageous
+elif ans == 2:
+  ans_set = intelligence
+
+char_score = update_dict(char_score, ans_set)
+
+
+
+
+  
+
 #print (char_score)
 #printing to test if the vaules are added up correctly 
 
@@ -70,7 +146,7 @@ sort_char_score = sorted(char_score.items(), key=lambda x: x[1], reverse=True)
 i = 0
 #the value of i will increase by one every loop thus will check the first key would become the next key and the next key would become the key after next key
 # i will be the amount of ties, the value of i chanches 
-while i < len(sort_char_score) - 2:
+while i < len(sort_char_score):
   first_key = list(sort_char_score)[i] 
   next_key = list(sort_char_score)[i+1]
   #print (first_key)
@@ -95,7 +171,7 @@ for j in range(i):
   print (first_key [0],  end = '')
   print (",",  end = ' ')
 
-if i == 0:
+if i == 1:
   print("is your hogwarts best friend, you guys have so much in common!")
 else:
   print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!")
