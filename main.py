@@ -1,29 +1,23 @@
-#intro
-name = str(input("what's your name? (press enter after writing your name) "))
-print (" ")
+Hermioni_Granger = 0
+Harry_Potter = 0
+Ron_Weasley = 0
+Draco_Malfoy = 0
+Neville_Longbottom = 0
+Luna_Lovegood = 0
+Cedric_Diggory = 0
+Fred_and_George_Weasley = 0
+Ginny_Weasley = 0
 
-non_caps = 0 
-  
-while non_caps ==0:
-  if not name.isalpha():
-    print ("*******************************************************")
-    print("Please enter only alphabetical characters for your name.")
-    print ("*******************************************************")
-    print("  ")
-    name = str(input("what's your name? (press enter after writing your name) "))
-    print(" ")
-    
-    non_caps = 0
-  if name.isalpha():
-    non_caps = 1
+#Who would you want to be friends with?
+#bad influce (enter 0)
+#good influence (enter 1)
+#reserved(eneter 2)
+
+#input = bad infuence 
+
+Harry_Potter += 1 
+Draco_Malfoy+= 1
+Ginny_Weasley+=1
 
 
-
-print (" ")
-print("ʕ•́ᴥ•̀ʔっ♡ Hello {}".format(name)) 
-print ("welcome to this harry potter quiz ʕ•́ᴥ•̀ʔっ♡ ")
-print ("Harry potter is a book series written by auther JK Rowlings.She wrote a total of 7 books but this quiz is based on 6 of them")
-print("   ")
-print ("          .。･:*:･(✿ ◕ 3 ◕ ) ❤ ( ◕ ε ◕ ✿ )･:*:･。.")
-print("   ")
-print ("You'll be instructed to press a number that equals your option then press enter right after you entered it, at the end of the quiz, you will find out who your hogwarts best friend or the people in your freind group are!")
+#etc.......
