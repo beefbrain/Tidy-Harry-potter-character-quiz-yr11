@@ -1,4 +1,4 @@
-  #def function for non int error handling 
+#def function for non int error handling 
 def main():
   def int_only():  
     while True:
@@ -54,7 +54,7 @@ def main():
   print("   ")
   print ("You'll be instructed to press a number that equals your option then press enter right after you entered it, at the end of the quiz, you will find out who your hogwarts best friend or the people in your freind group are!")
   print('')
-  input("input anything to continue")
+  input("input anything to continue...")
   print("")
   print("")
   print("")
@@ -306,6 +306,8 @@ def main():
   print('')
   print('Making jokes, memes or funny tiktoks')
   print('Enter 6')
+
+  
   ans = int_only()
   
     
@@ -317,7 +319,7 @@ def main():
     if ans <=6:
      break
       
-  play_sport = {"Ginny Weasley" "Cedric Diggory", "Fred and George Weasley", "Harry Potter", "Draco Malfoy"}
+  play_sport = {"Ginny Weasley", "Cedric Diggory", "Fred and George Weasley", "Harry Potter", "Draco Malfoy"}
   vid_brd_game = {"Ron Weasley"} 
   art = {"Luna Lovegood"}
   reading = {"Hermioni Granger"}
@@ -372,7 +374,7 @@ def main():
   
   read_book = {"Hermioni Granger",  "Neville Longbottom"}
   myself = {"Luna Lovegood"}
-  binge = "Ron Weasley" 
+  binge = {"Ron Weasley"}
   friends = {"Harry Potter", "Cedric Diggory"}
   family = {"Ginny Weasley", "Fred and George Weasley", "Draco Malfoy"}
   
@@ -450,7 +452,7 @@ def main():
   #Question 9---------------------------------------
   
   print('------------------------------------------------------------------')
-  print("Q8...what is a trait an annoying trait you don't mind in a person?")
+  print("Q9...what is a trait an annoying trait you don't mind in a person?")
   print('------------------------------------------------------------------')
   print("Oversensitivity")
   print("Enter 0")
@@ -510,7 +512,7 @@ def main():
   
   #Question 10--------------------------------------
   print("-------------------------------------")
-  print("Would you rather have a friend who is very…")
+  print("Q10..Would you rather have a friend who is very…")
   print("-------------------------------------")
   print("Boring")
   print("Enter 0")
@@ -583,10 +585,14 @@ def main():
     print("is your hogwarts best friend, you guys have so much in common!")
   else:
     print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!")
-  replay = input("Press 0 to play again or anything else to finish") 
+  replay = int(input("Press 0 to play again or anything else to finish"))
   if replay == 0:
+    print('')
+    print('')
+    print('')
     main()
   else:
+    print("Ihope you enjoyed this quiz young wizrad!")
     exit()
 #this is where my quiz starts
 main()
