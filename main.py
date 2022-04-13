@@ -14,12 +14,12 @@ def main():
           print("Please input integer only...") 
           print("****************************")     
           continue
-  #mathcing dict with chosen list def function(+1)
+  #mathcing dict with chosen list def function(+1)(adding to dict value)
   def update_dict(up_dict, cho_set):
     for character in cho_set:
       up_dict[character] +=1
     return up_dict
-  #mathcing dict with chosen list def function(-1)
+  #mathcing dict with chosen list def function(-1)(taking away from dict value)
   def update_dict_n(up_dict, cho_set):
     for character in cho_set:
       up_dict[character] -=1
@@ -29,7 +29,7 @@ def main():
   print (" ")
   
   non_caps = 0 
-    
+#non apla error handle    
   while non_caps ==0:
     if not name.isalpha():
       print ("*******************************************************")
@@ -64,7 +64,7 @@ def main():
   char_score = {}.fromkeys(["Hermioni Granger", "Harry Potter", "Ron Weasley", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood", "Cedric Diggory", "Fred and George Weasley", "Ginny Weasley" ], 0)
   #question 1--------------------------------------------
   print('--------------------------------------------')
-  print ("Q1:   Who would you want to be friends with?")
+  print ("Q1:⚡🧙 Who would you want to be friends with? ⚡🧙")
   print ("-------------------------------------------")
   print ("someone who is a bit of a bad influence, breaking rules are part of the fun")
   print ("Enter 0")
@@ -74,12 +74,11 @@ def main():
   print('')
   print ("Someone a bit quiet and down to earth, they are very relaxing to hang out with")
   print ("Enter 2")
-  #what id id to make this work was made my while and if statememnt more specific and added the input in the loop which i didn't do before.
   
-  
+#calling non int error hadling function
   ans = int_only()
   
-    
+#making sure that input is within option range
   while ans > 2:
     print("That is not an option, try again")
     print("********************************")
@@ -87,12 +86,12 @@ def main():
     ans = int_only()
     if ans <=2:
      break
-    
+#sets for chosen option
   bad_boy_girl = {"Harry Potter", "Draco Malfoy", "Ginny Weasley"} 
   gd_influ = {"Hermioni Granger", "Neville Longbottom", "Ginny Weasley"} 
   quiet = {"Neville Longbottom", "Luna Lovegood", "Cedric Diggory"} 
   ans_set = {}
-  
+#mathcing input with mathcing set
   if ans == 0:
       ans_set = bad_boy_girl
   elif ans == 1:
@@ -101,12 +100,14 @@ def main():
     ans_set = quiet
   
   # the keys in the the dictionary char_score is the same to the value of all of the sets. i need to use a for loop to link them as the for loop will check the dictionary keys one after the other.
-  
+
+#calling function that matches chosen set and dict
   char_score = update_dict(char_score, ans_set)
-  
+
+#^privious processes are repeated for every question just with diffeerent print statments and different question ranges and sets
   #question 2 _--------------------------------------------
   print("--------------------------------------")
-  print("Q2:  I would like my friends to be...")
+  print("""Q2:🪄🦌I would like my friends to be...🪄🦌""")
   print("--------------------------------------")
   print("Funny, I love to have a good laugh with my friends")
   print("Enter 0")
@@ -143,7 +144,7 @@ def main():
   char_score = update_dict(char_score, ans_set)
   #question 3--------------------------------------------
   print("-------------------------------------------------------")
-  print("Q3...Which one of these traits would you like in a friend")
+  print("""Q3:🪄🐇 Which one of these traits would you like in a friend?🪄🐇""")
   print("-------------------------------------------------------")
   print("I would like my friend to be positive and brighten things up even when im sad")
   print("Enter 0")
@@ -166,7 +167,7 @@ def main():
       
   positivity = {"Luna Lovegood", "Fred and George Weasley"}
   courageous = {"Ron Weasley", "Neville Longbottom"}
-  intelligence = { "Hermioni Granger", "Draco Malfoy Cedric Diggory", "Ginny Weasley"}
+  intelligence = { "Hermioni Granger", "Draco Malfoy", "Cedric Diggory", "Ginny Weasley"}
   
   
       
@@ -181,7 +182,7 @@ def main():
   
   #question 4-----------------------------------------
   print("-------------------------------------------------------")
-  print("Q4...What quality do you thinkis the most admirable")
+  print("Q4: 🏰🦅 What quality do you think is the most admirable 🏰🦅")
   print("-------------------------------------------------------")
   print("loyalty, the trust that can be apon them is very reassuring")
   print("Enter 0")
@@ -230,7 +231,7 @@ def main():
   
   
   print('------------------------------')
-  print('Q5... Pick a hogwarts subject')
+  print('Q5: 🪄⚗️ Pick a hogwarts subject 🪄⚗️')
   print('------------------------------')
   print("Defence against the dark arts")
   print("Enter 0")
@@ -284,7 +285,7 @@ def main():
   
   #Question 6---------------------------------------
   print('------------------------------')
-  print('Q6... What is your hobby')
+  print('Q6: 💛🏆 What is your hobby? 💛🏆')
   print('------------------------------')
   print("Playing physical Sports")
   print("Enter 0")
@@ -345,7 +346,7 @@ def main():
   char_score = update_dict(char_score, ans_set)
   #Question 7---------------------------------------
   print("--------------------------------------")
-  print("Q7...How are you spending your weekend")
+  print("Q7: 💙🍺How are you spending your weekend? 💙🍺")
   print("--------------------------------------")
   print("Reading a good book or comics")
   print("Enter 0")
@@ -393,7 +394,7 @@ def main():
   char_score = update_dict(char_score, ans_set)
   #Question 8---------------------------------------
   print('----------------------------------------------------------------')
-  print('Q8...what is an annoying trait you cannot tollerate in a person?')
+  print('Q8: 😤 what is an annoying trait you cannot tollerate in a person? 😤')
   print('---------------------------------------------------------------')
   print("Oversensitivity, I can never make any jokes around them as they are always offended")
   print("Enter 0")
@@ -452,7 +453,7 @@ def main():
   #Question 9---------------------------------------
   
   print('------------------------------------------------------------------')
-  print("Q9...what is a trait an annoying trait you don't mind in a person?")
+  print("Q9:🌸💛 What is an annoying trait you don't mind in a person? 🌸💛")
   print('------------------------------------------------------------------')
   print("Oversensitivity")
   print("Enter 0")
@@ -512,7 +513,7 @@ def main():
   
   #Question 10--------------------------------------
   print("-------------------------------------")
-  print("Q10..Would you rather have a friend who is very…")
+  print("Q10: 🪄🐕Would you rather have a friend who is very…🪄🐕")
   print("-------------------------------------")
   print("Boring")
   print("Enter 0")
@@ -585,14 +586,19 @@ def main():
     print("is your hogwarts best friend, you guys have so much in common!")
   else:
     print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!")
-  replay = int(input("Press 0 to play again or anything else to finish"))
+  print("")
+  print("")
+  print("")
+  replay = int(input("Press 0 to play again or anything else to finish..."))
   if replay == 0:
     print('')
     print('')
     print('')
     main()
   else:
-    print("Ihope you enjoyed this quiz young wizrad!")
+    print('')
+    print('')
+    print("I hope you enjoyed this quiz young wizrad!")
     exit()
 #this is where my quiz starts
 main()
