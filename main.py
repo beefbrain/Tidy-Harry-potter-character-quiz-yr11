@@ -589,8 +589,9 @@ def main():
   print("")
   print("")
   print("")
-  replay = int(input("Press 0 to play again or anything else to finish..."))
-  if replay == 0:
+  print("Press 0 to play again or any other number to finish...")
+  ans = int_only()
+  if ans == 0:
     print('')
     print('')
     print('')
