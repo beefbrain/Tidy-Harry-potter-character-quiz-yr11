@@ -1,65 +1,65 @@
 #def function for non int error handling 
-def main():
-  def int_only():  
-    while True:
-      try:
-        print(" ")
-        ans1 = 0
-        ans1 = int(input("Enter your option here..."))
-        print(" ")
-        return ans1
-        break
-      except ValueError:  
-          print ("")
-          print("Please input integer only...") 
-          print("****************************")     
-          continue
-  #mathcing dict with chosen list def function(+1)(adding to dict value)
-  def update_dict(up_dict, cho_set):
-    for character in cho_set:
-      up_dict[character] +=1
-    return up_dict
-  #mathcing dict with chosen list def function(-1)(taking away from dict value)
-  def update_dict_n(up_dict, cho_set):
-    for character in cho_set:
-      up_dict[character] -=1
-    return up_dict
-  #intro
-  name = str(input("what's your name? (press enter after writing your name) "))
-  print (" ")
-  
-  non_caps = 0 
-#non apla error handle    
-  while non_caps ==0:
-    if not name.isalpha():
-      print ("*******************************************************")
-      print("Please enter only alphabetical characters for your name.")
-      print ("*******************************************************")
-      print("  ")
-      name = str(input("what's your name? (press enter after writing your name) "))
+
+def int_only():  
+  while True:
+    try:
       print(" ")
-      
-      non_caps = 0
-    if name.isalpha():
-      non_caps = 1
-  
-  
-  
-  print (" ")
-  print("ʕ•́ᴥ•̀ʔっ♡ Hello {}".format(name)) 
-  print ("welcome to this harry potter quiz ʕ•́ᴥ•̀ʔっ♡ ")
-  print ("Harry potter is a book series written by auther JK Rowlings.She wrote a total of 7 books but this quiz is based on 6 of them")
-  print("   ")
-  print ("          .。･:*:･(✿ ◕ 3 ◕ ) ❤ ( ◕ ε ◕ ✿ )･:*:･。.")
-  print("   ")
-  print ("You'll be instructed to press a number that equals your option then press enter right after you entered it, at the end of the quiz, you will find out who your hogwarts best friend or the people in your freind group are!")
-  print('')
-  input("input anything to continue...")
-  print("")
-  print("")
-  print("")
-  
-  
+      ans1 = 0
+      ans1 = int(input("Enter your option here..."))
+      print(" ")
+      return ans1
+      break
+    except ValueError:  
+        print ("")
+        print("Please input integer only...") 
+        print("****************************")     
+        continue
+#mathcing dict with chosen list def function(+1)(adding to dict value)
+def update_dict(up_dict, cho_set):
+  for character in cho_set:
+    up_dict[character] +=1
+  return up_dict
+#mathcing dict with chosen list def function(-1)(taking away from dict value)
+def update_dict_n(up_dict, cho_set):
+  for character in cho_set:
+    up_dict[character] -=1
+  return up_dict
+#intro
+name = str(input("what's your name? (press enter after writing your name) "))
+print (" ")
+
+non_caps = 0 
+#non apla error handle    
+while non_caps ==0:
+  if not name.isalpha():
+    print ("*******************************************************")
+    print("Please enter only alphabetical characters for your name.")
+    print ("*******************************************************")
+    print("  ")
+    name = str(input("what's your name? (press enter after writing your name) "))
+    print(" ")
+    
+    non_caps = 0
+  if name.isalpha():
+    non_caps = 1
+
+
+
+print (" ")
+print("ʕ•́ᴥ•̀ʔっ♡ Hello {}".format(name)) 
+print ("welcome to this harry potter quiz ʕ•́ᴥ•̀ʔっ♡ ")
+print ("Harry potter is a book series written by auther JK Rowlings.She wrote a total of 7 books but this quiz is based on 6 of them")
+print("   ")
+print ("          .。･:*:･(✿ ◕ 3 ◕ ) ❤ ( ◕ ε ◕ ✿ )･:*:･。.")
+print("   ")
+print ("You'll be instructed to press a number that equals your option then press enter right after you entered it, at the end of the quiz, you will find out who your hogwarts best friend or the people in your freind group are!")
+print('')
+input("input anything to continue...")
+print("")
+print("")
+print("")
+
+def main():
   #dictionary of all the characters all characters have the same value of 0 so i found a finction that is a short cut for this
   char_score = {}.fromkeys(["Hermioni Granger", "Harry Potter", "Ron Weasley", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood", "Cedric Diggory", "Fred and George Weasley", "Ginny Weasley" ], 0)
   #question 1--------------------------------------------
@@ -75,10 +75,10 @@ def main():
   print ("Someone a bit quiet and down to earth, they are very relaxing to hang out with")
   print ("Enter 2")
   
-#calling non int error hadling function
+  #calling non int error hadling function
   ans = int_only()
   
-#making sure that input is within option range
+  #making sure that input is within option range
   while ans > 2:
     print("That is not an option, try again")
     print("********************************")
@@ -86,12 +86,12 @@ def main():
     ans = int_only()
     if ans <=2:
      break
-#sets for chosen option
+  #sets for chosen option
   bad_boy_girl = {"Harry Potter", "Draco Malfoy", "Ginny Weasley"} 
   gd_influ = {"Hermioni Granger", "Neville Longbottom", "Ginny Weasley"} 
   quiet = {"Neville Longbottom", "Luna Lovegood", "Cedric Diggory"} 
   ans_set = {}
-#mathcing input with mathcing set
+  #mathcing input with mathcing set
   if ans == 0:
       ans_set = bad_boy_girl
   elif ans == 1:
@@ -100,11 +100,11 @@ def main():
     ans_set = quiet
   
   # the keys in the the dictionary char_score is the same to the value of all of the sets. i need to use a for loop to link them as the for loop will check the dictionary keys one after the other.
-
-#calling function that matches chosen set and dict
+  
+  #calling function that matches chosen set and dict
   char_score = update_dict(char_score, ans_set)
-
-#^privious processes are repeated for every question just with diffeerent print statments and different question ranges and sets
+  
+  #^privious processes are repeated for every question just with diffeerent print statments and different question ranges and sets
   #question 2 _--------------------------------------------
   print("---------------------------------------------")
   print("""Q2:🪄🦌I would like my friends to be...🪄🦌""")
@@ -307,7 +307,7 @@ def main():
   print('')
   print('Making jokes, memes or funny tiktoks')
   print('Enter 6')
-
+  
   
   ans = int_only()
   
@@ -600,5 +600,5 @@ def main():
     print('')
     print("I hope you enjoyed this quiz young wizrad!")
     exit()
-#this is where my quiz starts
+#this is where the body of my quiz starts
 main()
