@@ -63,9 +63,9 @@ def main():
   #dictionary of all the characters all characters have the same value of 0 so i found a finction that is a short cut for this
   char_score = {}.fromkeys(["Hermioni Granger", "Harry Potter", "Ron Weasley", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood", "Cedric Diggory", "Fred and George Weasley", "Ginny Weasley" ], 0)
   #question 1--------------------------------------------
-  print('--------------------------------------------')
+  print('----------------------------------------------------')
   print ("Q1:⚡🧙 Who would you want to be friends with? ⚡🧙")
-  print ("-------------------------------------------")
+  print ("---------------------------------------------------")
   print ("someone who is a bit of a bad influence, breaking rules are part of the fun")
   print ("Enter 0")
   print('')
@@ -106,9 +106,9 @@ def main():
 
 #^privious processes are repeated for every question just with diffeerent print statments and different question ranges and sets
   #question 2 _--------------------------------------------
-  print("--------------------------------------")
+  print("---------------------------------------------")
   print("""Q2:🪄🦌I would like my friends to be...🪄🦌""")
-  print("--------------------------------------")
+  print("---------------------------------------------")
   print("Funny, I love to have a good laugh with my friends")
   print("Enter 0")
   print('')
@@ -143,9 +143,9 @@ def main():
   
   char_score = update_dict(char_score, ans_set)
   #question 3--------------------------------------------
-  print("-------------------------------------------------------")
+  print("-----------------------------------------------------------------")
   print("""Q3:🪄🐇 Which one of these traits would you like in a friend?🪄🐇""")
-  print("-------------------------------------------------------")
+  print("-----------------------------------------------------------------")
   print("I would like my friend to be positive and brighten things up even when im sad")
   print("Enter 0")
   print('')
@@ -181,9 +181,9 @@ def main():
   char_score = update_dict(char_score, ans_set)
   
   #question 4-----------------------------------------
-  print("-------------------------------------------------------")
+  print("--------------------------------------------------------------")
   print("Q4: 🏰🦅 What quality do you think is the most admirable 🏰🦅")
-  print("-------------------------------------------------------")
+  print("---------------------------------------------------------------")
   print("loyalty, the trust that can be apon them is very reassuring")
   print("Enter 0")
   print('')
@@ -230,9 +230,9 @@ def main():
   
   
   
-  print('------------------------------')
+  print('-------------------------------------')
   print('Q5: 🪄⚗️ Pick a hogwarts subject 🪄⚗️')
-  print('------------------------------')
+  print('-------------------------------------')
   print("Defence against the dark arts")
   print("Enter 0")
   print('')
@@ -284,9 +284,9 @@ def main():
   
   
   #Question 6---------------------------------------
-  print('------------------------------')
+  print('---------------------------------')
   print('Q6: 💛🏆 What is your hobby? 💛🏆')
-  print('------------------------------')
+  print('---------------------------------')
   print("Playing physical Sports")
   print("Enter 0")
   print('')
@@ -345,9 +345,9 @@ def main():
   
   char_score = update_dict(char_score, ans_set)
   #Question 7---------------------------------------
-  print("--------------------------------------")
+  print("-----------------------------------------------")
   print("Q7: 💙🍺How are you spending your weekend? 💙🍺")
-  print("--------------------------------------")
+  print("-----------------------------------------------")
   print("Reading a good book or comics")
   print("Enter 0")
   print('')
@@ -393,9 +393,9 @@ def main():
   
   char_score = update_dict(char_score, ans_set)
   #Question 8---------------------------------------
-  print('----------------------------------------------------------------')
+  print('---------------------------------------------------------------------')
   print('Q8: 😤 what is an annoying trait you cannot tollerate in a person? 😤')
-  print('---------------------------------------------------------------')
+  print('---------------------------------------------------------------------')
   print("Oversensitivity, I can never make any jokes around them as they are always offended")
   print("Enter 0")
   print('')
@@ -512,9 +512,9 @@ def main():
   char_score = update_dict(char_score, ans_set)
   
   #Question 10--------------------------------------
-  print("-------------------------------------")
+  print("---------------------------------------------------------")
   print("Q10: 🪄🐕Would you rather have a friend who is very…🪄🐕")
-  print("-------------------------------------")
+  print("---------------------------------------------------------")
   print("Boring")
   print("Enter 0")
   print('')
