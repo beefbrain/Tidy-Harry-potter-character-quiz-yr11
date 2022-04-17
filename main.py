@@ -399,7 +399,9 @@ def main():
   if i == 0:
     print("is your hogwarts best friend, you guys have so much in common!")
   else:
-    print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common! \n \n \n \n \n \n \n Press 0 to play again or any other number to finish...")
+    print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!  ")
+    
+  print ("\n \n \n \n Press 0 to play again or any other number to finish...")
   ans = int_only()
   if ans == 0:
     print('\n \n \n \n \n \n ')
