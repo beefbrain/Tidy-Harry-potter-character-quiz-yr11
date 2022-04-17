@@ -5,13 +5,12 @@ def int_only():
     try:
       print(" ")
       ans1 = 0
-      ans1 = int(input("Enter your option here..."))
-      print(" ")
+      ans1 = int(input("Enter your option here... \n\n"))
+      
       return ans1
       break
     except ValueError:  
-        print ("")
-        print("Please input integer only... \n ****************************")     
+        print("\n\nPlease input integer only... \n ****************************")     
         continue
 #mathcing dict with chosen list def function(+1)(adding to dict value)
 def update_dict(up_dict, cho_set):
