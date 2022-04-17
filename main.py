@@ -11,8 +11,7 @@ def int_only():
       break
     except ValueError:  
         print ("")
-        print("Please input integer only...") 
-        print("****************************")     
+        print("Please input integer only... \n ****************************")     
         continue
 #mathcing dict with chosen list def function(+1)(adding to dict value)
 def update_dict(up_dict, cho_set):
@@ -32,10 +31,7 @@ non_caps = 0
 #non apla error handle    
 while non_caps ==0:
   if not name.isalpha():
-    print ("*******************************************************")
-    print("Please enter only alphabetical characters for your name.")
-    print ("*******************************************************")
-    print("  ")
+    print ("******************************************************* \n Please enter only alphabetical characters for your name. \n ******************************************************* \n \n ")
     name = str(input("what's your name? (press enter after writing your name) "))
     print(" ")
     
@@ -45,44 +41,25 @@ while non_caps ==0:
 
 
 
-print (" ")
-print("ʕ•́ᴥ•̀ʔっ♡ Hello {}".format(name)) 
-print ("welcome to this harry potter quiz ʕ•́ᴥ•̀ʔっ♡ ")
-print ("Harry potter is a book series written by auther JK Rowlings.She wrote a total of 7 books but this quiz is based on 6 of them")
-print("   ")
-print ("          .。･:*:･(✿ ◕ 3 ◕ ) ❤ ( ◕ ε ◕ ✿ )･:*:･。.")
-print("   ")
-print ("You'll be instructed to press a number that equals your option then press enter right after you entered it, at the end of the quiz, you will find out who your hogwarts best friend or the people in your freind group are!")
-print('')
+
+print(" \n \n ʕ•́ᴥ•̀ʔっ♡ Hello {}".format(name)) 
+print ("welcome to this harry potter quiz ʕ•́ᴥ•̀ʔっ♡ \n Harry potter is a book series written by auther JK Rowlings.She wrote a total of 7 books but this quiz is based on 6 of them \n \n .。･:*:･(✿ ◕ 3 ◕ ) ❤ ( ◕ ε ◕ ✿ )･:*:･。. \n \n You'll be instructed to press a number that equals your option then press enter right after you entered it, at the end of the quiz, you will find out who your hogwarts best friend or the people in your freind group are! \n \n ")
+
 input("input anything to continue...")
-print("")
-print("")
-print("")
+print(" \n \n \n \n ")
 
 def main():
   #dictionary of all the characters all characters have the same value of 0 so i found a finction that is a short cut for this
   char_score = {}.fromkeys(["Hermioni Granger", "Harry Potter", "Ron Weasley", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood", "Cedric Diggory", "Fred and George Weasley", "Ginny Weasley" ], 0)
   #question 1--------------------------------------------
-  print('----------------------------------------------------')
-  print ("Q1:⚡🧙 Who would you want to be friends with? ⚡🧙")
-  print ("---------------------------------------------------")
-  print ("someone who is a bit of a bad influence, breaking rules are part of the fun")
-  print ("Enter 0")
-  print('')
-  print ("Someone who is a good influence so they can encurage me to stay on track")
-  print ("Enter 1")
-  print('')
-  print ("Someone a bit quiet and down to earth, they are very relaxing to hang out with")
-  print ("Enter 2")
+  print("""----------------------------------------------------\n Q1:⚡🧙 Who would you want to be friends with? ⚡🧙\n--------------------------------------------------- \n Someone who is a bit of a bad influence, breaking rules are part of the fun \n Enter 0 \n  \nSomeone who is a good influence so they can encurage me to stay on track \n Enter 1 \n \nSomeone a bit quiet and down to earth, they are very relaxing to hang out with \n Enter 2 \n \n""")
   
   #calling non int error hadling function
   ans = int_only()
   
   #making sure that input is within option range
   while ans > 2:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n \n ")
     ans = int_only()
     if ans <=2:
      break
@@ -106,25 +83,12 @@ def main():
   
   #^privious processes are repeated for every question just with diffeerent print statments and different question ranges and sets
   #question 2 _--------------------------------------------
-  print("---------------------------------------------")
-  print("""Q2:🪄🦌I would like my friends to be...🪄🦌""")
-  print("---------------------------------------------")
-  print("Funny, I love to have a good laugh with my friends")
-  print("Enter 0")
-  print('')
-  print("Popular, it will improve my social status at hogwarts")
-  print("Enter 1")
-  print('')
-  print("Bravery, thats how I know they will never be afraid to stad up for me or what is right")
-  print("Enter 2")
-  print("")
+  print("""---------------------------------------------\nQ2:🪄🦌I would like my friends to be...🪄🦌\n---------------------------------------------\n Funny, I love to have a good laugh with my friends \n Enter 0 \n \n Popular, it will improve my social status at hogwarts \n Enter 1 \n \n Bravery, thats how I know they will never be afraid to stad up for me or what is right \n Enter 2 \n \n""")
   
   ans = int_only()
   
   while ans > 2:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=2:
      break
@@ -142,25 +106,12 @@ def main():
     ans_set = brave
   
   char_score = update_dict(char_score, ans_set)
-  #question 3--------------------------------------------
-  print("-----------------------------------------------------------------")
-  print("""Q3:🪄🐇 Which one of these traits would you like in a friend?🪄🐇""")
-  print("-----------------------------------------------------------------")
-  print("I would like my friend to be positive and brighten things up even when im sad")
-  print("Enter 0")
-  print('')
-  print("Curagous, I love to do things a little out my comfort zone and it would be nice to have friends to acompany me")
-  print("Enter 1")
-  print('')
-  print("Inteligence, they can help me get out of tough situations with their wit! and it would be fun to join academic clubs together.")
-  print("Enter 2")
-  print("")
+  #question 3------------------------------------
+  print("""-----------------------------------------------------------------\nQ3:🪄🐇 Which one of these traits would you like in a friend?🪄🐇\n-----------------------------------------------------------------\n I would like my friend to be positive and brighten things up even when im sad \n Enter 0 \n \n Curagous, I love to do things a little out my comfort zone and it would be nice to have friends to acompany me \n Enter 1 \n \n Inteligence, they can help me get out of tough situations with their wit! and it would be fun to join academic clubs together \n Enter 2 \n \n""")
   
   ans = int_only()
   while ans > 2:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=2:
      break
@@ -181,29 +132,11 @@ def main():
   char_score = update_dict(char_score, ans_set)
   
   #question 4-----------------------------------------
-  print("--------------------------------------------------------------")
-  print("Q4: 🏰🦅 What quality do you think is the most admirable 🏰🦅")
-  print("---------------------------------------------------------------")
-  print("loyalty, the trust that can be apon them is very reassuring")
-  print("Enter 0")
-  print('')
-  print("sacraficing, It is so admirable when someone can think of others over themselfs")
-  print("Enter 1")
-  print('')
-  print("Accepting, people who don't judge people and accept people for who they are")
-  print("Enter 2")
-  print("")
-  print('kindness, I love it when people think about the little things to help people out')
-  print('Enter 3')
-  print('')
-  print('helpfulness, these people go out of their way to help with homework, tests, or little things in general')
-  print('Enter 4')
+  print("--------------------------------------------------------------\n Q4: 🏰🦅 What quality do you think is the most admirable 🏰🦅\n---------------------------------------------------------------\n loyalty, the trust that can be apon them is very reassuring \n Enter 0 \n \n sacraficing, It is so admirable when someone can think of others over themselfs \n Enter 1 \n \n Accepting, people who don't judge people and accept people for who they are \n Enter 2 \n \n kindness, I love it when people think about the little things to help people out \n Enter 3 \n \n helpfulness, these people go out of their way to help with homework, tests, or little things in general \n Enter 4 \n \n")
   
   ans = int_only()
   while ans > 4:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=4:
      break
@@ -230,32 +163,11 @@ def main():
   
   
   
-  print('-------------------------------------')
-  print('Q5: 🪄⚗️ Pick a hogwarts subject 🪄⚗️')
-  print('-------------------------------------')
-  print("Defence against the dark arts")
-  print("Enter 0")
-  print('')
-  print("Herbology")
-  print("Enter 1")
-  print('')
-  print("Care of magical creatures")
-  print("Enter 2")
-  print("")
-  print('Flying class')
-  print('Enter 3')
-  print('')
-  print('Arithmatics (wizerding mathmatics)')
-  print('Enter 4')
-  print('')
-  print('Magical Charms and spells')
-  print('Enter 5')
+  print("-------------------------------------\n🪄⚗️ Pick a hogwarts subject 🪄⚗️\n------------------------------------\n Defence against the dark arts \n Enter 0 \n \n Herbology \n Enter 1 \n \n Care of magical creatures \n Enter 2 \n \n Flying class \n Enter 3 \n \n Arithmatics (wizerding mathmatics) \n Enter 4 \n \n Magical Charms and spells \n Enter 5 \n \n ")
   
   ans = int_only()
   while ans > 5:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=5:
      break
@@ -284,38 +196,14 @@ def main():
   
   
   #Question 6---------------------------------------
-  print('---------------------------------')
-  print('Q6: 💛🏆 What is your hobby? 💛🏆')
-  print('---------------------------------')
-  print("Playing physical Sports")
-  print("Enter 0")
-  print('')
-  print("Playing video or board games")
-  print("Enter 1")
-  print('')
-  print("Painting, drawing or art in general")
-  print("Enter 2")
-  print("")
-  print('Reading books or comics')
-  print('Enter 3')
-  print('')
-  print('Cooking')
-  print('Enter 4')
-  print('')
-  print('Gardening')
-  print('Enter 5')
-  print('')
-  print('Making jokes, memes or funny tiktoks')
-  print('Enter 6')
+  print("---------------------------------\nQ6: 💛🏆 What is your hobby? 💛🏆\n---------------------------------\n Playing physical Sports\n Enter 0\n \n Playing video or board games\n Enter 1\n \n Painting, drawing or art in general\n Enter 2\n \n Reading books or comics \n Enter 3\n \n Cooking \n Enter 4 \n \n Gardening \n Enter 5 \n \n Making jokes, memes or funny tiktoks \n Enter 6 \n \n ")
   
   
   ans = int_only()
   
     
   while ans > 6:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=6:
      break
@@ -344,35 +232,17 @@ def main():
     ans_set = joke_memes
   
   char_score = update_dict(char_score, ans_set)
-  #Question 7---------------------------------------
-  print("-----------------------------------------------")
-  print("Q7: 💙🍺How are you spending your weekend? 💙🍺")
-  print("-----------------------------------------------")
-  print("Reading a good book or comics")
-  print("Enter 0")
-  print('')
-  print("Something by myself, I enjoy my alone time")
-  print("Enter 1")
-  print('')
-  print("Binge watching a series or movies")
-  print("Enter 2")
-  print("")
-  print('plan something with my friends')
-  print('Enter 3')
-  print('')
-  print('Doing something woth family')
-  print('Enter 4')
+#Question 7---------------------------------------
+  print("-----------------------------------------------\nQ7: 💙🍺How are you spending your weekend? 💙🍺\n-----------------------------------------------\n Reading a good book or comics\n Enter 0\n \n Something by myself, I enjoy my alone time\n Enter 1\n \n Binge watching a series or movies \n Enter 2\n \n plan something with my friends \n Enter 3 \n \n Doing something with family \n Enter 4 \n \n")
   ans = int_only()
   
     
   while ans > 4:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=4:
      break
-  
+      
   read_book = {"Hermioni Granger",  "Neville Longbottom"}
   myself = {"Luna Lovegood"}
   binge = {"Ron Weasley"}
@@ -393,29 +263,7 @@ def main():
   
   char_score = update_dict(char_score, ans_set)
   #Question 8---------------------------------------
-  print('---------------------------------------------------------------------')
-  print('Q8: 😤 what is an annoying trait you cannot tollerate in a person? 😤')
-  print('---------------------------------------------------------------------')
-  print("Oversensitivity, I can never make any jokes around them as they are always offended")
-  print("Enter 0")
-  print('')
-  print("Insensitivity, they never realise when they've crossed the line")
-  print("Enter 1")
-  print('')
-  print("Arrogence, They always think their better than everyone else, its so annoying")
-  print("Enter 2")
-  print("")
-  print("When they're oppinionated, they always think they are right and are not willing to cosider other opinions")
-  print('Enter 3')
-  print('')
-  print('They do not think before they do things, Like they screw up so bad which easily could have need avoided if they just used their heads!')
-  print('Enter 4')
-  print('')
-  print('Pessimistic, their negativity does not make me feel any better in tough situations, like would it hurt to be a little positive?')
-  print('Enter 5')
-  print('')
-  print('Impatience, they get mad so easily')
-  print('Enter 6')
+  print("---------------------------------------------------------------------\nQ8: 😤 what is an annoying trait you cannot tollerate in a person? 😤\n---------------------------------------------------------------------\n Oversensitivity, I can never make any jokes around them as they are always offended\n Enter 0\n \n Insensitivity, they never realise when they've crossed the line \n Enter 1 \n \n Arrogence, They always think their better than everyone else, its so annoying \n Enter 2 \n \n When they're oppinionated, they always think they are right and are not willing to cosider other opinions \n Enter 3 \n \n They do not think before they do things, Like they screw up so bad which easily could have need avoided if they just used their heads!\n Enter 4 \n \n Pessimistic, their negativity does not make me feel any better in tough situations, like would it hurt to be a little positive? \n Enter 5 \n \n Impatience, they get mad so easily \n Enter 6")
   ans = int_only()
   
     
@@ -452,36 +300,12 @@ def main():
   char_score = update_dict_n(char_score, ans_set)
   #Question 9---------------------------------------
   
-  print('------------------------------------------------------------------')
-  print("Q9:🌸💛 What is an annoying trait you don't mind in a person? 🌸💛")
-  print('------------------------------------------------------------------')
-  print("Oversensitivity")
-  print("Enter 0")
-  print('')
-  print("Insensitivity")
-  print("Enter 1")
-  print('')
-  print("Arrogence")
-  print("Enter 2")
-  print("")
-  print("When they're oppinionated")
-  print('Enter 3')
-  print('')
-  print('They do not think before they do things')
-  print('Enter 4')
-  print('')
-  print('Pessimistic')
-  print('Enter 5')
-  print('')
-  print('Impatience')
-  print('Enter 6')
+  print("------------------------------------------------------------------\nQ9:🌸💛 What is an annoying trait you don't mind in a person? 🌸💛\n------------------------------------------------------------------\n Oversensitivity\n Enter 0\n \n Insensitivity \n Enter 1 \n \n Arrogence \n Enter 2 \n \n When they're oppinionated \n Enter 3 \n \n They do not think before they do things \n Enter 4 \n \n Pessimistic \n Enter 5 \n \n Impatience \n Enter 6 \n \n ")
   ans = int_only()
   
     
   while ans > 6:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=6:
      break
@@ -512,22 +336,13 @@ def main():
   char_score = update_dict(char_score, ans_set)
   
   #Question 10--------------------------------------
-  print("---------------------------------------------------------")
-  print("Q10: 🪄🐕Would you rather have a friend who is very…🪄🐕")
-  print("---------------------------------------------------------")
-  print("Boring")
-  print("Enter 0")
-  print('')
-  print('Odd')
-  print("Enter 1")
+  print("---------------------------------------------------------\nQ10: 🪄🐕Would you rather have a friend who is very…🪄🐕\n---------------------------------------------------------\n Boring\n Enter 0\n \n Odd \n Enter 1 \n \n")
   
   ans = int_only()
   
     
   while ans > 1:
-    print("That is not an option, try again")
-    print("********************************")
-    print(" ")
+    print("That is not an option, try again \n ******************************** \n")
     ans = int_only()
     if ans <=1:
      break
@@ -585,20 +400,13 @@ def main():
   if i == 0:
     print("is your hogwarts best friend, you guys have so much in common!")
   else:
-    print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!")
-  print("")
-  print("")
-  print("")
-  print("Press 0 to play again or any other number to finish...")
+    print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common! \n \n \n \n \n \n \n Press 0 to play again or any other number to finish...")
   ans = int_only()
   if ans == 0:
-    print('')
-    print('')
-    print('')
+    print('\n \n \n \n \n \n ')
     main()
   else:
-    print('')
-    print('')
+    print('\n \n \n \n ')
     print("I hope you enjoyed this quiz young wizrad!")
     exit()
 #this is where the body of my quiz starts
