@@ -23,6 +23,7 @@ def update_dict_n(up_dict, cho_set):
     up_dict[character] -=1
   return up_dict
 #intro
+#asks for name
 name = str(input("what's your name? (press enter after writing your name) "))
 print (" ")
 
@@ -40,18 +41,20 @@ while non_caps ==0:
 
 
 
-
+#greets and prints instructions
 print(" \n \n ʕ•́ᴥ•̀ʔっ♡ Hello {}".format(name)) 
 print ("welcome to this harry potter quiz ʕ•́ᴥ•̀ʔっ♡ \n Harry potter is a book series written by auther JK Rowlings.She wrote a total of 7 books but this quiz is based on 6 of them \n \n .。･:*:･(✿ ◕ 3 ◕ ) ❤ ( ◕ ε ◕ ✿ )･:*:･。. \n \n You'll be instructed to press a number that equals your option then press enter right after you entered it, at the end of the quiz, you will find out who your hogwarts best friend or the people in your freind group are! \n \n ")
 
 input("input anything to continue...")
 print(" \n \n \n \n ")
 
-def main():
+def main(): #<--- this functions allows replay at the end of this quiz
+
+  
   #dictionary of all the characters all characters have the same value of 0 so i found a finction that is a short cut for this
   char_score = {}.fromkeys(["Hermioni Granger", "Harry Potter", "Ron Weasley", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood", "Cedric Diggory", "Fred and George Weasley", "Ginny Weasley" ], 0)
   #question 1--------------------------------------------
-  print("""----------------------------------------------------\n Q1:⚡🧙 Who would you want to be friends with? ⚡🧙\n--------------------------------------------------- \n Someone who is a bit of a bad influence, breaking rules are part of the fun \n Enter 0 \n  \nSomeone who is a good influence so they can encurage me to stay on track \n Enter 1 \n \nSomeone a bit quiet and down to earth, they are very relaxing to hang out with \n Enter 2 \n \n""")
+  print("""☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡--\n Q1:⚡🧙 Who would you want to be friends with? ⚡🧙\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡ \n Someone who is a bit of a bad influence, breaking rules are part of the fun \n Enter 0 \n  \nSomeone who is a good influence so they can encurage me to stay on track \n Enter 1 \n \nSomeone a bit quiet and down to earth, they are very relaxing to hang out with \n Enter 2 \n \n""")
   
   #calling non int error hadling function
   ans = int_only()
@@ -82,7 +85,7 @@ def main():
   
   #^privious processes are repeated for every question just with diffeerent print statments and different question ranges and sets
   #question 2 _--------------------------------------------
-  print("""---------------------------------------------\nQ2:🪄🦌I would like my friends to be...🪄🦌\n---------------------------------------------\n Funny, I love to have a good laugh with my friends \n Enter 0 \n \n Popular, it will improve my social status at hogwarts \n Enter 1 \n \n Bravery, thats how I know they will never be afraid to stad up for me or what is right \n Enter 2 \n \n""")
+  print("""☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\nQ2:🪄🦌I would like my friends to be...🪄🦌\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Funny, I love to have a good laugh with my friends \n Enter 0 \n \n Popular, it will improve my social status at hogwarts \n Enter 1 \n \n Bravery, thats how I know they will never be afraid to stad up for me or what is right \n Enter 2 \n \n""")
   
   ans = int_only()
   
@@ -106,7 +109,7 @@ def main():
   
   char_score = update_dict(char_score, ans_set)
   #question 3------------------------------------
-  print("""-----------------------------------------------------------------\nQ3:🪄🐇 Which one of these traits would you like in a friend?🪄🐇\n-----------------------------------------------------------------\n I would like my friend to be positive and brighten things up even when im sad \n Enter 0 \n \n Curagous, I love to do things a little out my comfort zone and it would be nice to have friends to acompany me \n Enter 1 \n \n Inteligence, they can help me get out of tough situations with their wit! and it would be fun to join academic clubs together \n Enter 2 \n \n""")
+  print("""☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\nQ3:🪄🐇 Which one of these traits would you like in a friend?🪄🐇\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n I would like my friend to be positive and brighten things up even when im sad \n Enter 0 \n \n Curagous, I love to do things a little out my comfort zone and it would be nice to have friends to acompany me \n Enter 1 \n \n Inteligence, they can help me get out of tough situations with their wit! and it would be fun to join academic clubs together \n Enter 2 \n \n""")
   
   ans = int_only()
   while ans > 2:
@@ -131,7 +134,7 @@ def main():
   char_score = update_dict(char_score, ans_set)
   
   #question 4-----------------------------------------
-  print("--------------------------------------------------------------\n Q4: 🏰🦅 What quality do you think is the most admirable 🏰🦅\n---------------------------------------------------------------\n loyalty, the trust that can be apon them is very reassuring \n Enter 0 \n \n sacraficing, It is so admirable when someone can think of others over themselfs \n Enter 1 \n \n Accepting, people who don't judge people and accept people for who they are \n Enter 2 \n \n kindness, I love it when people think about the little things to help people out \n Enter 3 \n \n helpfulness, these people go out of their way to help with homework, tests, or little things in general \n Enter 4 \n \n")
+  print("☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Q4: 🏰🦅 What quality do you think is the most admirable 🏰🦅\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n loyalty, the trust that can be apon them is very reassuring \n Enter 0 \n \n sacraficing, It is so admirable when someone can think of others over themselfs \n Enter 1 \n \n Accepting, people who don't judge people and accept people for who they are \n Enter 2 \n \n kindness, I love it when people think about the little things to help people out \n Enter 3 \n \n helpfulness, these people go out of their way to help with homework, tests, or little things in general \n Enter 4 \n \n")
   
   ans = int_only()
   while ans > 4:
@@ -162,7 +165,7 @@ def main():
   
   
   
-  print("-------------------------------------\n🪄⚗️ Pick a hogwarts subject 🪄⚗️\n------------------------------------\n Defence against the dark arts \n Enter 0 \n \n Herbology \n Enter 1 \n \n Care of magical creatures \n Enter 2 \n \n Flying class \n Enter 3 \n \n Arithmatics (wizerding mathmatics) \n Enter 4 \n \n Magical Charms and spells \n Enter 5 \n \n ")
+  print("☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n🪄⚗️ Pick a hogwarts subject 🪄⚗️\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Defence against the dark arts \n Enter 0 \n \n Herbology \n Enter 1 \n \n Care of magical creatures \n Enter 2 \n \n Flying class \n Enter 3 \n \n Arithmatics (wizerding mathmatics) \n Enter 4 \n \n Magical Charms and spells \n Enter 5 \n \n ")
   
   ans = int_only()
   while ans > 5:
@@ -195,7 +198,7 @@ def main():
   
   
   #Question 6---------------------------------------
-  print("---------------------------------\nQ6: 💛🏆 What is your hobby? 💛🏆\n---------------------------------\n Playing physical Sports\n Enter 0\n \n Playing video or board games\n Enter 1\n \n Painting, drawing or art in general\n Enter 2\n \n Reading books or comics \n Enter 3\n \n Cooking \n Enter 4 \n \n Gardening \n Enter 5 \n \n Making jokes, memes or funny tiktoks \n Enter 6 \n \n ")
+  print("☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\nQ6: 💛🏆 What is your hobby? 💛🏆\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Playing physical Sports\n Enter 0\n \n Playing video or board games\n Enter 1\n \n Painting, drawing or art in general\n Enter 2\n \n Reading books or comics \n Enter 3\n \n Cooking \n Enter 4 \n \n Gardening \n Enter 5 \n \n Making jokes, memes or funny tiktoks \n Enter 6 \n \n ")
   
   
   ans = int_only()
@@ -232,7 +235,7 @@ def main():
   
   char_score = update_dict(char_score, ans_set)
 #Question 7---------------------------------------
-  print("-----------------------------------------------\nQ7: 💙🍺How are you spending your weekend? 💙🍺\n-----------------------------------------------\n Reading a good book or comics\n Enter 0\n \n Something by myself, I enjoy my alone time\n Enter 1\n \n Binge watching a series or movies \n Enter 2\n \n plan something with my friends \n Enter 3 \n \n Doing something with family \n Enter 4 \n \n")
+  print("☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\nQ7: 💙🍺How are you spending your weekend? 💙🍺\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Reading a good book or comics\n Enter 0\n \n Something by myself, I enjoy my alone time\n Enter 1\n \n Binge watching a series or movies \n Enter 2\n \n plan something with my friends \n Enter 3 \n \n Doing something with family \n Enter 4 \n \n")
   ans = int_only()
   
     
@@ -262,7 +265,7 @@ def main():
   
   char_score = update_dict(char_score, ans_set)
   #Question 8---------------------------------------
-  print("---------------------------------------------------------------------\nQ8: 😤 what is an annoying trait you cannot tollerate in a person? 😤\n---------------------------------------------------------------------\n Oversensitivity, I can never make any jokes around them as they are always offended\n Enter 0\n \n Insensitivity, they never realise when they've crossed the line \n Enter 1 \n \n Arrogence, They always think their better than everyone else, its so annoying \n Enter 2 \n \n When they're oppinionated, they always think they are right and are not willing to cosider other opinions \n Enter 3 \n \n They do not think before they do things, Like they screw up so bad which easily could have need avoided if they just used their heads!\n Enter 4 \n \n Pessimistic, their negativity does not make me feel any better in tough situations, like would it hurt to be a little positive? \n Enter 5 \n \n Impatience, they get mad so easily \n Enter 6")
+  print("☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\nQ8: 😤 what is an annoying trait you cannot tollerate in a person? 😤\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Oversensitivity, I can never make any jokes around them as they are always offended\n Enter 0\n \n Insensitivity, they never realise when they've crossed the line \n Enter 1 \n \n Arrogence, They always think their better than everyone else, its so annoying \n Enter 2 \n \n When they're oppinionated, they always think they are right and are not willing to cosider other opinions \n Enter 3 \n \n They do not think before they do things, Like they screw up so bad which easily could have need avoided if they just used their heads!\n Enter 4 \n \n Pessimistic, their negativity does not make me feel any better in tough situations, like would it hurt to be a little positive? \n Enter 5 \n \n Impatience, they get mad so easily \n Enter 6")
   ans = int_only()
   
     
@@ -299,7 +302,7 @@ def main():
   char_score = update_dict_n(char_score, ans_set)
   #Question 9---------------------------------------
   
-  print("------------------------------------------------------------------\nQ9:🌸💛 What is an annoying trait you don't mind in a person? 🌸💛\n------------------------------------------------------------------\n Oversensitivity\n Enter 0\n \n Insensitivity \n Enter 1 \n \n Arrogence \n Enter 2 \n \n When they're oppinionated \n Enter 3 \n \n They do not think before they do things \n Enter 4 \n \n Pessimistic \n Enter 5 \n \n Impatience \n Enter 6 \n \n ")
+  print("☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\nQ9:🌸💛 What is an annoying trait you don't mind in a person? 🌸💛\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Oversensitivity\n Enter 0\n \n Insensitivity \n Enter 1 \n \n Arrogence \n Enter 2 \n \n When they're oppinionated \n Enter 3 \n \n They do not think before they do things \n Enter 4 \n \n Pessimistic \n Enter 5 \n \n Impatience \n Enter 6 \n \n ")
   ans = int_only()
   
     
@@ -335,7 +338,7 @@ def main():
   char_score = update_dict(char_score, ans_set)
   
   #Question 10--------------------------------------
-  print("---------------------------------------------------------\nQ10: 🪄🐕Would you rather have a friend who is very…🪄🐕\n---------------------------------------------------------\n Boring\n Enter 0\n \n Odd \n Enter 1 \n \n")
+  print("｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\nQ10: 🪄🐕Would you rather have a friend who is very…🪄🐕\n☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡\n Boring\n Enter 0\n \n Odd \n Enter 1 \n \n")
   
   ans = int_only()
   
@@ -370,7 +373,8 @@ def main():
   
   i = 0
   #the value of i will increase by one every loop thus will check the first key would become the next key and the next key would become the key after next key
-  # i will be the amount of ties, the value of i changes 
+  # i will be the amount of ties, the value of i changes
+  #The -2 is because the final value in the dicts doesn't need to be checked with anything and placings start from 0
   while i < len(sort_char_score)-2:
     first_key = list(sort_char_score)[i] 
     next_key = list(sort_char_score)[i+1]
@@ -389,26 +393,31 @@ def main():
   #I need to print the key of the sorted dictionary up to 'i' place holder 
   # i will be using a for loop for this
   
-  
+  # the +1 is because ranges start from 1 instead on 0
+  print(" ༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶")
   for j in range(i+1):
     first_key = list(sort_char_score)[j] 
   #i am only printing the keys
     print (first_key [0],  end = '')
     print (",",  end = ' ')
-  
+#this is to end the quiz
   if i == 0:
-    print("is your hogwarts best friend, you guys have so much in common!")
+    print("is your hogwarts best friend, you guys have so much in common! \n ༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶")
   else:
-    print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!  ")
-    
+    print(" and you would make a wonderful friend group at Hogwarts, you all have so much in common!  \n ༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶༶•┈┈⛧┈♛ ♛┈⛧┈┈•༶")
+#asks if wants to replay
   print ("\n \n \n \n Press 0 to play again or any other number to finish...")
+#this is when user wants to replay
   ans = int_only()
   if ans == 0:
     print('\n \n \n \n \n \n ')
+    #the main part of the code which i made into a function is called.
     main()
+    #this is when user doesn't want to replay
   else:
     print('\n \n \n \n ')
     print("I hope you enjoyed this quiz young wizrad!")
+    #the code is ended
     exit()
 #this is where the body of my quiz starts
 main()
